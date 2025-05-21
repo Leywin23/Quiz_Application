@@ -22,7 +22,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseCors(options=>options.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader());
+app.UseCors(options=>options.WithOrigins("http://localhost:3000", "http://localhost:3001").AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -32,5 +32,9 @@ app.MapControllers();
 app.UseAuthorization();
 
 app.MapRazorPages();
-
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<QuizDbContext>();
+    dbContext.Database.Migrate();
+}
 app.Run();

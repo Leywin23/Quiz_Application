@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=TestoweHaslo123!
+    ports:
+      - "1433:1433"
+    restart: always
+
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+  backend:
+    build:
+      context: ./Backend/QuizAPI
+      dockerfile: Dockerfile
+    container_name: myquiz-backend
+    depends_on:
+      - sqlserver
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5000:8080"
+    restart: on-failure
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    container_name: myquiz-frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    restart: on-failure
+
+volumes:
+  sqlserver_data:
+
+networks:
+  default:
+    driver: bridge
