@@ -22,7 +22,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseCors(options=>options.WithOrigins("http://localhost:3000", "http://localhost:3001").AllowAnyMethod().AllowAnyHeader());
+app.UseCors(options=>options.WithOrigins("http://localhost:3000", "http://localhost:3001", "https://myquiz-frontend-app.lemonsmoke-b1ab5d88.polandcentral.azurecontainerapps.io").AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

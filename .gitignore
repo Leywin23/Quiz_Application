@@ -1,1 +1,5 @@
 Backend/QuizAPI/appsettings.json
+.vs/
+*.user
+*.suo
+*.vsidx
