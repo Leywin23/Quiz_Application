@@ -1,48 +1,22 @@
-name: Deploy Backend to Azure
+name: Build Docker Image Only
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'Backend/**'
-      - '.github/workflows/deploy-backend.yml'
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
-    env:
-      AZURE_CONTAINER_REGISTRY: myquizacr123.azurecr.io
-      IMAGE_NAME: backend
-      CONTAINER_APP_NAME: quiz-backend-app
-      RESOURCE_GROUP: Quiz-App-CRC
-      CONTAINER_ENV: quiz-env
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Log in to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Build backend Docker image
+        run: |
+          docker build -t myquiz-backend:latest ./backend
 
-    - name: Log in to ACR
-      run: az acr login --name myquizacr123
-
-    - name: Build Docker image
-      run: |
-        cd Backend/QuizAPI
-        docker build -t $AZURE_CONTAINER_REGISTRY/$IMAGE_NAME:latest .
-
-    - name: Push image to ACR
-      run: docker push $AZURE_CONTAINER_REGISTRY/$IMAGE_NAME:latest
-
-    - name: Deploy to Azure Container App
-      run: |
-        az containerapp update \
-          --name $CONTAINER_APP_NAME \
-          --resource-group $RESOURCE_GROUP \
-          --image $AZURE_CONTAINER_REGISTRY/$IMAGE_NAME:latest \
-          --env-vars ConnectionStrings__Default=${{ secrets.DB_CONNECTION_STRING }}
+      - name: Save Docker image as tarball artifact (opcjonalne)
+        run: |
+          docker save myquiz-backend:latest -o backend-image.tar
