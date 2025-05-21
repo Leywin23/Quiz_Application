@@ -1,4 +1,4 @@
-name: Build and Push Docker Image to ACR
+name: Build and Push Docker Images to ACR
 
 on:
   push:
@@ -17,10 +17,18 @@ jobs:
         run: |
           echo "${{ secrets.ACR_PASSWORD }}" | docker login myquizacr123.azurecr.io -u ${{ secrets.ACR_USERNAME }} --password-stdin
 
-      - name: Build Docker image
+      - name: Build Backend Docker image
         run: |
           docker build -t myquizacr123.azurecr.io/myquiz-backend:latest ./Backend/QuizAPI
 
-      - name: Push Docker image to ACR
+      - name: Push Backend Docker image to ACR
         run: |
           docker push myquizacr123.azurecr.io/myquiz-backend:latest
+
+      - name: Build Frontend Docker image
+        run: |
+          docker build -t myquizacr123.azurecr.io/myquiz-frontend:latest ./Frontend
+
+      - name: Push Frontend Docker image to ACR
+        run: |
+          docker push myquizacr123.azurecr.io/myquiz-frontend:latest
