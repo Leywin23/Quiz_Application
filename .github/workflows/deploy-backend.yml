@@ -15,8 +15,8 @@ jobs:
 
       - name: Build backend Docker image
         run: |
-          docker build -t myquiz-backend:latest ./backend
+          docker build -t myquiz-backend:latest ./Backend/QuizAPI
 
-      - name: Save Docker image as tarball artifact (opcjonalne)
+      - name: Save Docker image as tarball artifact
         run: |
           docker save myquiz-backend:latest -o backend-image.tar
