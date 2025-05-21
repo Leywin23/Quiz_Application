@@ -1,4 +1,4 @@
-name: Build Docker Image Only
+name: Build and Push Docker Image to ACR
 
 on:
   push:
@@ -6,17 +6,21 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build backend Docker image
+      - name: Log in to Azure Container Registry
         run: |
-          docker build -t myquiz-backend:latest ./Backend/QuizAPI
+          echo "${{ secrets.ACR_PASSWORD }}" | docker login myquizacr123.azurecr.io -u ${{ secrets.ACR_USERNAME }} --password-stdin
 
-      - name: Save Docker image as tarball artifact
+      - name: Build Docker image
         run: |
-          docker save myquiz-backend:latest -o backend-image.tar
+          docker build -t myquizacr123.azurecr.io/myquiz-backend:latest ./Backend/QuizAPI
+
+      - name: Push Docker image to ACR
+        run: |
+          docker push myquizacr123.azurecr.io/myquiz-backend:latest
