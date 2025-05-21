@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\DESKTOP\\source\\repos\\MyQuizCRC\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|c:\\users\\desktop\\source\\repos\\myquizcrc\\backend\\quizapi\\models\\questions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\models\\questions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|c:\\users\\desktop\\source\\repos\\myquizcrc\\backend\\quizapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|c:\\users\\desktop\\source\\repos\\myquizcrc\\backend\\quizapi\\models\\questions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\models\\questions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|c:\\users\\desktop\\source\\repos\\myquizcrc\\backend\\quizapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DESKTOP\\source\\repos\\MyQuizCRC\\Backend\\QuizAPI\\Migrations\\20250520204853_test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QuizAPI\\Migrations\\20250520204853_test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|c:\\users\\desktop\\source\\repos\\myquizcrc\\backend\\quizapi\\migrations\\20250520204853_test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E341DC3-A2D2-4152-BACB-3CFE4AEAEB68}|QuizAPI\\QuizAPI.csproj|solutionrelative:quizapi\\migrations\\20250520204853_test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Questions.cs",
               "DocumentMoniker": "C:\\Users\\DESKTOP\\source\\repos\\MyQuizCRC\\Backend\\QuizAPI\\Models\\Questions.cs",
               "RelativeDocumentMoniker": "QuizAPI\\Models\\Questions.cs",
@@ -59,18 +59,17 @@
               "RelativeToolTip": "QuizAPI\\Migrations\\20250520204853_test1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T20:48:54.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T20:48:54.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DESKTOP\\source\\repos\\MyQuizCRC\\Backend\\QuizAPI\\appsettings.json",
               "RelativeDocumentMoniker": "QuizAPI\\appsettings.json",
               "ToolTip": "C:\\Users\\DESKTOP\\source\\repos\\MyQuizCRC\\Backend\\QuizAPI\\appsettings.json",
               "RelativeToolTip": "QuizAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-20T20:26:03.359Z",
               "EditorCaption": ""
@@ -85,8 +84,7 @@
               "RelativeToolTip": "QuizAPI\\Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAmwCUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:27:20.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T11:27:20.983Z"
             }
           ]
         }
