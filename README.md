@@ -1,6 +1,6 @@
 # Quiz_Application
 🧠 MyQuiz App
-MyQuiz to pełnoprawna aplikacja quizowa typu fullstack, która umożliwia użytkownikom rozwiązywanie quizów, przeglądanie wyników i interakcję z pytaniami zapisanymi w zdalnej bazie danych. Aplikacja opiera się na React (frontend) i ASP.NET Core Web API (backend), a baza danych działa w Azure SQL Database. Projekt jest automatycznie budowany i wdrażany przy użyciu GitHub Actions CI/CD.
+MyQuiz to pełnoprawna aplikacja quizowa typu fullstack, która umożliwia użytkownikom rozwiązywanie quizów, przeglądanie wyników. Aplikacja opiera się na React (frontend) i ASP.NET Core Web API (backend), a baza danych działa w Azure SQL Database. Projekt jest automatycznie budowany i wdrażany przy użyciu GitHub Actions CI/CD.
 
 🔧 Technologie
 ✅ Frontend: React + TypeScript
