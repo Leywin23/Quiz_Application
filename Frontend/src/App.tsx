@@ -48,6 +48,7 @@ function App() {
         setParticipants,
         start,
         handleStartButton,
+        setStart
     }}
   />
   </div>
