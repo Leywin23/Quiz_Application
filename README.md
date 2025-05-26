@@ -1,31 +1,50 @@
-# Quiz_Application
-🧠 MyQuiz App
-MyQuiz to pełnoprawna aplikacja quizowa typu fullstack, która umożliwia użytkownikom rozwiązywanie quizów, przeglądanie wyników i interakcję z pytaniami zapisanymi w zdalnej bazie danych. Aplikacja opiera się na React (frontend) i ASP.NET Core Web API (backend), a baza danych działa w Azure SQL Database. Projekt jest automatycznie budowany i wdrażany przy użyciu GitHub Actions CI/CD.
+# 🧠 MyQuiz App
 
-🔧 Technologie
-✅ Frontend: React + TypeScript
+MyQuiz is a fullstack quiz application that allows users to solve quizzes, view their results, and interact with questions stored in a remote database. The project uses React (frontend) and ASP.NET Core Web API (backend), with the database hosted in Azure SQL Database. The application is automatically built and deployed using a GitHub Actions CI/CD pipeline.
 
-✅ Backend: ASP.NET Core (.NET 8) + Entity Framework Core
+## 🔧 Technologies
 
-✅ Baza danych: Azure SQL Database
+✅ Frontend: React + TypeScript  
+✅ Backend: ASP.NET Core (.NET 8) + Entity Framework Core  
+✅ Database: Azure SQL Database  
+✅ Hosting: Azure Container Apps  
+✅ CI/CD: GitHub Actions (build & deploy to ACR)
 
-✅ Hosting: (np. Azure App Service, Vercel, Netlify – wpisz, gdzie wrzucasz)
+## 📌 Features
 
-✅ CI/CD: GitHub Actions (build + deploy)
+- Quiz system with questions and answers  
+- Score tracking and result display  
+- Cloud-based SQL backend on Azure  
+- Automated deployment with GitHub Actions  
 
-📌 Funkcje
- Quiz z pytaniami i odpowiedziami
+## ☁️ Cloud Deployment
 
- Obsługa wyników
+This repository includes a GitHub Actions pipeline that:
 
- Wersja zdalna z Azure SQL
+- Builds a Docker image from the provided Dockerfile  
+- Pushes the image to Azure Container Registry (ACR)  
+- The container is then deployed to Azure Container Apps (manually due to permission limitations)
 
- Automatyczne wdrażanie z GitHub Actions
+## 🗄️ Database
 
+In the production environment, the application connects to Azure SQL Database.
 
- 📈 Do rozwoju
- Panel administracyjny
+## 🔐 Security
 
- Tworzenie własnych quizów
+- Passwords are stored securely using hashing  
+- API access is protected with JWT-based authorization  
+- Environment variables and secrets are managed securely via GitHub Secrets and Azure
 
- Rejestracja/logowanie użytkownika
+## 🖼️ Screenshots
+
+### 🔐 Login Page
+![Login](Screenshots/login-page.png)
+
+### 🧠 Quiz Interface
+![Quiz](Screenshots/quiz-page.png)
+
+### 📊 Results View
+![Results](Screenshots/results-page.png)
+
+### 📋 Answer Review Page
+![Review](Screenshots/review-page.png)
